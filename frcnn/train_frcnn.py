@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+'''
+Created on Sun Apr 8 2018
+
+@ zhengsipeng
+'''
+
 from __future__ import division
 import random
 import pprint
@@ -12,9 +18,9 @@ from keras import backend as K
 from keras.optimizers import Adam, SGD, RMSprop
 from keras.layers import Input
 from keras.models import Model
-from keras_frcnn import config, data_generators
-from keras_frcnn import losses as losses
-import keras_frcnn.roi_helpers as roi_helpers
+from frcnn import config, data_generators
+from frcnn import losses as losses
+import frcnn.roi_helpers as roi_helpers
 from keras.utils import generic_utils
 
 sys.setrecursionlimit(40000)

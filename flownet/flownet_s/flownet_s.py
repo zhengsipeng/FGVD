@@ -1,7 +1,14 @@
 # -*- coding: utf-8 -*-
+'''
+Created on Sun Apr 8 2018
+
+@ zhengsipeng
+'''
+
 from keras.layers import Flatten, Dense, Input, Conv2D, MaxPool2D, Dropout, LeakyReLU, Conv2DTranspose
 from keras import backend as K
-from flownet_s.utils import pad, antipad
+from utils import pad, antipad
+
 import tensorflow as tf
 
 def nn_base(input_tensor=None, trainable=False):
@@ -69,5 +76,5 @@ def nn_base(input_tensor=None, trainable=False):
     #END: Refinement Network
     
     flow = predict_flow2 * 20.0
-    flow = tf.image.resize_bilinear(flow, tf.stack[])
+    #flow = tf.image.resize_bilinear(flow, tf.stack[])
     
